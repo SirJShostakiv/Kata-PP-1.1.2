@@ -31,3 +31,7 @@ bin/
 
 ### Maven ###
 target/
+
+### SonarLint ###
+MyProject.iml
+TaskJDBC.iml

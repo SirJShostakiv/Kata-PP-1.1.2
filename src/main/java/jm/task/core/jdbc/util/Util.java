@@ -26,11 +26,14 @@ public class Util {
         return getMySQLConnection(HOST_NAME, DB_NAME, USERNAME, PASSWORD);
     }
     public static Connection getMySQLConnection(String hostName, String dbName,
-                                                String userName, String password) throws SQLException {
-
-        String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
-
-        return DriverManager.getConnection(connectionURL, userName, password);
+                                                String userName, String password) {
+        try {
+            String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
+            return DriverManager.getConnection(connectionURL, userName, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private static SessionFactory sessionFactory;
