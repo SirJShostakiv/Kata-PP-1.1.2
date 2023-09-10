@@ -20,9 +20,7 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "wGgfwfyg672";
 
-    public static Connection getMySQLConnection()
-            throws SQLException {
-
+    public static Connection getMySQLConnection() {
         return getMySQLConnection(HOST_NAME, DB_NAME, USERNAME, PASSWORD);
     }
     public static Connection getMySQLConnection(String hostName, String dbName,
